@@ -1,0 +1,149 @@
+.wrapper {
+  padding-top: 180px;
+  padding-bottom: 150px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.content {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  text-align: center;
+}
+.image {
+  margin-bottom: 15px;
+  > img {
+    width: 360px;
+    height: 260px;
+  }
+}
+.title {
+  margin-bottom: 40px;
+  font-size: 42px;
+  line-height: 1.23;
+  font-weight: 600;
+  color: #000;
+  text-transform: uppercase;
+  animation: slideIn 1s ease 0.8s both;
+}
+.description {
+  max-width: 560px;
+  font-size: 24px;
+  line-height: 1.5;
+  font-weight: 300;
+  color: #000;
+  text-align: left;
+  margin-bottom: 105px;
+  animation: slideIn 1s ease 1.2s both;
+}
+.name {
+  margin-left: 20px;
+  text-align: left;
+  margin-bottom: 4px;
+  font-size: 22px;
+  line-height: 1.35;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.social {
+  text-align: left;
+  margin-left: 20px;
+  > a {
+    color: #7a7a7a;
+    margin-bottom: 18px;
+    font-size: 14px;
+    line-height: 1.55;
+    font-weight: 300;
+    border-bottom: 1px solid green;
+    text-decoration: none;
+    margin-right: 5px;
+  }
+}
+@keyframes slideIn {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1200px) {
+  .image {
+    margin-bottom: 15px;
+    > img {
+      width: 300px;
+      height: 215px;
+    }
+  }
+  .title {
+    margin-left: 50px;
+  }
+  .description {
+    margin-left: 50px;
+  }
+}
+@media (max-width: 960px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    text-align: center;
+  }
+  .title {
+    margin-left: 50px;
+  }
+  .description {
+    margin-left: 50px;
+  }
+  .name {
+    text-align: center;
+    margin-left: 0;
+  }
+  .social {
+    text-align: center;
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 660px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    text-align: center;
+  }
+  .title {
+    margin-left: 50px;
+  }
+  .description {
+    margin-left: 50px;
+  }
+  .image {
+    margin-bottom: 15px;
+    > img {
+      width: 360px;
+      height: 260px;
+    }
+  }
+  .social {
+    margin-bottom: 20px;
+    > a {
+      margin: 0 10px;
+    }
+  }
+}

@@ -1,0 +1,182 @@
+.wrapper {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100px;
+  width: 100%;
+}
+.container {
+  background-color: #fff;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: 2000;
+  top: 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0);
+  transition: background-color 0.3s linear;
+}
+.burgerMenu {
+  display: none;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  position: relative;
+  width: 100px;
+  height: 85px;
+}
+.wrapperScroll {
+  background-color: rgba(33, 33, 33, 0.95);
+  height: 90px;
+  transform: translateY(0px);
+  opacity: 1;
+  position: fixed;
+  z-index: 2000;
+  width: 100%;
+  top: 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0);
+  transition: background-color 0.3s linear;
+}
+.enter {
+  top: -100px;
+  opacity: 0;
+}
+.enterActive {
+  top: 0;
+  opacity: 1;
+  transition: top 400ms ease, opacity 200ms ease;
+}
+.exit {
+  top: 0;
+  opacity: 1;
+}
+.exitActive {
+  opacity: 0;
+  top: -100px;
+  transition: top 400ms ease, opacity 200ms ease;
+}
+.rowScroll {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 5px;
+}
+
+.logoScroll {
+  margin-left: 30px;
+  > img {
+    margin: 10p 0 0 100px;
+  }
+}
+.navbarScroll {
+  display: flex;
+  > a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    > section {
+      margin: 0 10px;
+      text-transform: uppercase;
+    }
+  }
+  a:hover {
+    color: #2abf31;
+    transition: color 0.3s ease-in-out;
+  }
+}
+.contact {
+  color: #fff;
+  margin-right: 40px;
+  font-size: 18px;
+}
+
+@media (max-width: 960px) {
+  .container {
+    background-color: #111;
+    display: block;
+    width: 100%;
+    height: 65px;
+  }
+  .row {
+    display: none;
+  }
+
+  .burgerMenu {
+    width: 30px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 25px;
+
+    > span {
+      height: 3px;
+      width: 100%;
+      background-color: #faf6fa;
+      position: relative;
+      display: block;
+      transition: transform 0.3s ease;
+      border-radius: 15px;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      height: 3px;
+      width: 100%;
+      background-color: #faf6fa;
+      transition: transform 0.3s ease;
+      border-radius: 15px;
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+  }
+  .activeMenu {
+    > span {
+      transform: scale(0);
+    }
+    &::before {
+      top: 50%;
+      transform: rotate(-45deg) translate(0, -50%);
+    }
+
+    &::after {
+      bottom: 50%;
+      transform: rotate(45deg) translate(0, 50%);
+    }
+  }
+
+  .wrapperScroll {
+    display: none;
+  }
+  .mobileMenu {
+    width: 100%;
+    height: 520px;
+    background-color: rgb(33, 33, 33);
+    position: absolute;
+    top: 0;
+    z-index: 500;
+
+    text-align: center;
+  }
+  .contact {
+    text-align: center;
+    margin-left: 80px;
+    margin-top: 40px;
+  }
+}

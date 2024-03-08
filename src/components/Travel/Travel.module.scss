@@ -1,0 +1,100 @@
+.globalWrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+.wrapper {
+  text-align: left;
+  max-width: 1200px;
+  margin: 110px 20px 0 20px;
+}
+.container {
+  max-width: 960px;
+  margin-bottom: 120px;
+}
+.title {
+  margin-bottom: 60px;
+  font-size: 64px;
+  font-weight: 700;
+  text-transform: uppercase;
+  animation: slideIn 1s ease 0.8s both;
+  line-height: 1.23;
+}
+.description {
+  color: rgb(143, 143, 143);
+  padding-bottom: 30px;
+  font-size: 24px;
+  line-height: 1.5;
+  font-weight: 300;
+  animation: slideIn 1s ease 1.2s both;
+}
+.travelTitle {
+  text-transform: uppercase;
+  font-size: 28px;
+  line-height: 1.17;
+  font-weight: 600;
+  color: #000;
+  padding-bottom: 45px;
+}
+.grid {
+  display: grid;
+
+  grid-template-areas:
+    "block1 block1"
+    "block2 block2"
+    "block3 block4"
+    "block5 block5"
+    "block6 block6";
+  gap: 45px 0;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 960px) {
+  .grid {
+    display: grid;
+    justify-content: center;
+    grid-template-areas:
+      "block1"
+      "block2"
+      "block3"
+      "block4"
+      "block5"
+      "block6";
+    gap: 45px 0;
+  }
+}
+
+@media (max-width: 960px) {
+  .globalWrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .wrapper {
+    text-align: left;
+    max-width: 1200px;
+    margin: 110px 20px 0 20px;
+  }
+  .travelTitle {
+    text-align: center;
+  }
+}
+
+@media (max-width: 660px) {
+  .title {
+    font-size: 30px;
+  }
+  .container {
+    max-width: 100%;
+  }
+}

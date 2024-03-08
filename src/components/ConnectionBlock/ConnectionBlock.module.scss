@@ -1,0 +1,63 @@
+.wrapper {
+  padding: 180px 0;
+  background-color: #1a1a1a;
+}
+.container {
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0;
+}
+.avatarSection {
+  margin-bottom: 12px;
+  > img {
+    width: 160px;
+    border-radius: 50%;
+  }
+}
+.title {
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 60px;
+  font-size: 42px;
+  text-transform: uppercase;
+}
+.name {
+  color: #fff;
+  font-size: 22px;
+  line-height: 1.35;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.description {
+  color: #fff;
+  margin-top: 4px;
+  opacity: 0.7;
+  font-size: 14px;
+  line-height: 1.55;
+  font-weight: 300;
+}
+.personalData {
+  color: #fff;
+  margin-top: 45px;
+  font-size: 18px;
+  line-height: 1.55;
+  font-weight: 300;
+}
+.row {
+  display: flex;
+  justify-content: center;
+  margin-top: 45px;
+}
+.sociallink {
+  margin: 8px 2px 0;
+  > a {
+    > svg {
+      margin: 0 2px;
+      > path {
+        fill: #2abf31;
+      }
+    }
+  }
+}

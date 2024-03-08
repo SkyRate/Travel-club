@@ -1,0 +1,50 @@
+.navbar {
+  display: flex;
+  margin-right: 3px;
+  margin-top: 30px;
+  > li {
+    list-style-type: none;
+    font-weight: 600;
+    color: #000;
+    transition: color 0.3s ease-in-out;
+    padding: 0 17px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  > li:hover {
+    transition: color 0.3s ease-in-out;
+    color: #2abf31 !important;
+  }
+}
+.navbarScroll {
+  display: flex;
+  margin: 30px 0;
+  > li {
+    list-style-type: none;
+    font-weight: 600;
+    color: #fff;
+    transition: color 0.3s ease-in-out;
+    padding: 0 17px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  > li:hover {
+    transition: color 0.3s ease-in-out;
+    color: #2abf31 !important;
+  }
+}
+
+@media (max-width: 960px) {
+  .navbarScroll {
+    display: block;
+    text-align: center;
+    margin-top: 40px;
+    > li {
+      margin: 20px 0;
+    }
+  }
+}
