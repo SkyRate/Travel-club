@@ -9,7 +9,7 @@ export const CSSTransition = (props: PropsWithChildren<CSSTransitionProps>) => {
     <_CSSTransition {...props} nodeRef={nodeRef}>
       <>
         {Children.map(props.children, (child) => {
-          // @ts-expect-error
+          // @ts-expect-error This line is temporarily ignored due to a known issue with TypeScript type checking
           return cloneElement(child, { ref: nodeRef });
         })}
       </>
